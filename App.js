@@ -1,11 +1,13 @@
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [content, setContent] = useState('Hello World');
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      <StatusBar hidden/>
     </View>
   );
 }
@@ -13,8 +15,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f0f',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: "#fff",
+  }
 });
